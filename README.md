@@ -55,5 +55,18 @@ ng generate component signin
 > signin.component.ts
 > signin.component.html
 
+
+*****************+ Facebook *****************+
+https://developers.facebook.com/apps/
+
+Create App > Manage Business Integrations > "Continue"
+App Purpose "Yourselft or your own business" > Create App
+Facebook login > Web > URL: http://localhost:4200/
+npm i angularx-social-login
+
+
+
+
+
 -->
 
