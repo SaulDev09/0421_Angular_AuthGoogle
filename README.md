@@ -55,5 +55,15 @@ ng generate component signin
 > signin.component.ts
 > signin.component.html
 
+*****************+ facebook *****************+
+https://www.positronx.io/firebase-facebook-login-auth-provider-work-with-angular/
+> auth.service.ts > FacebookAuth
+
+*****************+ phone number *****************+
++ windows.service.ts
+> signin.component.html
+> signin.component.ts
+
+
 -->
 

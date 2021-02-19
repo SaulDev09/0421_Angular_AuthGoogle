@@ -4,3 +4,31 @@
     Log in with Google
   </button>
 </div>
+
+<!-- Calling FacebookAuth Api from AuthService -->
+<div class="formGroup">
+  <button type="button" (click)="authService.FacebookAuth()">
+    Log in with Facebook
+  </button>
+</div>
+
+<!-- Phone Auth -->
+<div [hidden]="user">
+  <h1>Input your phone number</h1>
+  <label for="phone">Phone number</label><br>
+  <input type="text" [(ngModel)]="phoneNumber" class="input" maxlength="12">
+  <div id="recaptcha-container"></div>
+  <button (click)="sendLoginCode()">Send SMS Code</button>
+
+  <div *ngIf="windowRef.confirmationResult">
+    <hr>
+    <label for="code">Input Verification Code</label><br>
+    <input type="text" name="code" [(ngModel)]="verificationCode">
+    <button (click)="verifyLoginCode()">Verify</button>
+  </div>
+</div>
+
+<div *ngIf="user">
+  You have successfully logged in with your phone number!
+  UserId: {{ user?.uid }}
+</div>

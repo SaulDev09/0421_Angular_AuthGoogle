@@ -16,14 +16,18 @@ export class AuthService {
     return this.AuthLogin(new auth.GoogleAuthProvider());
   }
 
+  // Sign in with Facebook
+  FacebookAuth() {
+    return this.AuthLogin(new auth.FacebookAuthProvider());
+  }
+
   // Auth logic to run auth providers
   AuthLogin(provider) {
     return this.afAuth.auth.signInWithPopup(provider)
       .then((result) => {
-        console.log('You have been successfully logged in!');
+        console.log('You have been successfully logged in!', result);
       }).catch((error) => {
         console.log(error);
       });
   }
-
 }
